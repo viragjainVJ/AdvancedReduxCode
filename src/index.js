@@ -1,16 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom";
+import Root from "../src/prod/testing/src/Root";
 
 import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
-}
+import App from "../src/prod/testing/src/components/App";
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+  <Root>
+    <BrowserRouter>
+      <Route path="/" component={App} />
+    </BrowserRouter>
+  </Root>,
+  rootElement
+);
