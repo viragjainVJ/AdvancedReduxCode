@@ -1,2 +1,0 @@
-# AdvancedReduxCode
-Created with CodeSandbox
